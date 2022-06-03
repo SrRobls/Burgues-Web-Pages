@@ -1,0 +1,15 @@
+body{
+    background-color: #541690;
+}
+
+/* Navegacion */
+
+.navegacion{
+    background-color: #FF4949;
+}
+
+
+/* Inicio-Bienvenida */
+.inicio_bienvenida{
+    background-image: url(/Imgs/Fondo_Bienvenida.jpg);
+}
