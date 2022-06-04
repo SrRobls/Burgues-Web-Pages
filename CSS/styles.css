@@ -8,6 +8,11 @@ img{
     height: 50px;
 }
 
+html{
+    box-sizing: border-box;
+}
+
+
 /* Header */
 .navegacion{
     position:fixed;
@@ -15,6 +20,7 @@ img{
     height: 90px;
     top: 0;
     background-image: linear-gradient(to left, #FAC213, #F77E21);
+    z-index: 1;
 }
 
 .navbar{
@@ -52,11 +58,8 @@ img{
     align-items: center;
 }
 
-.navbar li:hover{
-    background-color: #FEF9A7;
-}
-
 .navbar a{
+    display: inline-block;
     font-size: 3.5vmin;
     font-weight: bold;
     color: #D61C4E;
@@ -67,8 +70,64 @@ a{
 }
 
 /* Inicio-Bienvenida */
-.inicio_bienvenida{
+#inicio_bienvenida{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-image: url(/Imgs/Fondo_Bienvenida.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+    
+}
+
+#inicio_bienvenida::before{
+    content: "";
+    width: inherit;
+    min-height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background: linear-gradient(black, black);
+    opacity: 0.8;
+
+}
+
+.titulo_texto{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo_texto h2{
+    width: inherit;
+    font-size: 4.4vw;
+    color: #F77E21;
+    text-align: center;
+    margin: 0;
+    
+}
+
+.titulo_texto h1{
+    font-size: 6.0vw;
+    display: inline;
+    color: #D61C4E;
+    text-align: center;
+    margin: 0;
+    background: linear-gradient(to bottom, #F77E21, #FAC213);;
+    border-radius: 20px;
+}
+
+.img_haburguesa{
+    display: none;
 }
 
 
@@ -119,6 +178,10 @@ a{
     .navbar img{
         width: 50px;
         height: 50px;
+    }
+
+    .navbar a:hover{
+        font-size: 3.6vmin;
     }
 
 }
