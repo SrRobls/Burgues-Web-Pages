@@ -1,15 +1,124 @@
-body{
-    background-color: #541690;
+.contenedor{
+    background-color: #FEF9A7;
+    font-family: 'Roboto', sans-serif;
 }
 
-/* Navegacion */
+img{
+    width: 50px;
+    height: 50px;
+}
 
+/* Header */
 .navegacion{
-    background-color: #FF4949;
+    position:fixed;
+    width: 100%;
+    height: 90px;
+    top: 0;
+    background-image: linear-gradient(to left, #FAC213, #F77E21);
 }
 
+.navbar{
+    width: 100%;
+    height: inherit;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar img{
+    width: 60px;
+    height: 60px;
+}
+
+
+.navbar ul{
+    list-style: none;
+    width: 65%;
+    height: inherit;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    padding: 0px;
+}
+
+.navbar li{
+    width: 50%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar li:hover{
+    background-color: #FEF9A7;
+}
+
+.navbar a{
+    font-size: 3.5vmin;
+    font-weight: bold;
+    color: #D61C4E;
+}
+
+a{
+    text-decoration: none;
+}
 
 /* Inicio-Bienvenida */
 .inicio_bienvenida{
     background-image: url(/Imgs/Fondo_Bienvenida.jpg);
+}
+
+
+@media (min-width: 767px){
+
+    /* Navegacion */
+    .navegacion{
+        height: 65px;
+    }
+
+    .navbar{
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+
+    .navbar ul{
+        width: 85%;
+        height: inherit;
+        flex-flow: row nowrap;
+        margin: 0;
+    }
+
+    .navbar li{
+        width: 25%;
+        height: 100%;
+    }
+
+    .navbar li:first-child{
+        width: 20%;
+    }
+
+    .navbar li:last-child{
+        width: 30%;
+    }
+
+    .navbar a{
+        font-size: 2.5vmin;
+    }
+    
+}
+
+@media (min-width: 1079px){
+    /* Navegacion */
+    .navegacion{
+        height: 60px;
+    }
+
+    .navbar img{
+        width: 50px;
+        height: 50px;
+    }
+
 }
