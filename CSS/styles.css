@@ -20,7 +20,7 @@ html{
     height: 90px;
     top: 0;
     background-image: linear-gradient(to left, #FAC213, #F77E21);
-    z-index: 1;
+    z-index: 2;
 }
 
 .navbar{
@@ -126,10 +126,120 @@ a{
     border-radius: 20px;
 }
 
-.img_haburguesa{
-    display: none;
+/* Hamburguesas */
+
+#hamburguesas{
+    width: 100%;
+    margin: 10px auto;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
 }
 
+.venta_hamburguesa{
+    width: 305px;
+    height: auto;
+    margin: 10px;
+    border: 2px solid black;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.venta_hamburguesa p{
+    text-align: center;
+
+}
+
+.venta_hamburguesa h4{
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    background: linear-gradient(to left, #FAC213, #F77E21);
+    font-weight: bolder;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    height: 30px;
+    min-width: 68px;
+    border: 3px solid #D61C4E;
+    background: linear-gradient(to left, #FAC213, #F77E21);
+    border-radius: 8px;
+    display: inline-block;
+    padding-top: 12px;
+    font-weight: bold;
+}
+
+.btn:hover{
+    cursor: pointer;
+}
+
+.informacion_hamburguesa{
+    display: flex;
+    height: 220px;
+    font-weight: bold;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/Imgs/hamburguesa\ mexicana.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: bisque;
+    z-index: 1;
+}
+
+
+
+.venta_hamburguesa:first-child .informacion_hamburguesa{
+    background-image: url(/Imgs/hamburguesa\ mexicana.jpg);
+    
+}
+
+.venta_hamburguesa:nth-child(2) .informacion_hamburguesa{
+    background-image: url(/Imgs/hawaiana.jpg);
+}
+
+.venta_hamburguesa:nth-child(3) .informacion_hamburguesa{
+    background-image: url(/Imgs/clasica.jpg);
+}
+
+.venta_hamburguesa:nth-child(4) .informacion_hamburguesa{
+    background-image: url(/Imgs/olimpo.jpg);
+}
+
+.venta_hamburguesa:nth-child(5) .informacion_hamburguesa{
+    background-image: url(/Imgs/colombiana.jpg);
+}
+
+.venta_hamburguesa:last-child .informacion_hamburguesa{
+    background-image: url(/Imgs/italiana.jpg);
+}
+
+.informacion_hamburguesa::before{
+    content: "";
+    position: absolute;
+    width: 305px;
+    height: 220px;
+
+    background: linear-gradient(black, black);
+    opacity: 0.4;
+}
+
+.informacion_hamburguesa p{
+    position: relative;
+    margin: 0 10px;
+}
+
+.informacion_hamburguesa ul{
+    position: relative;
+}
 
 @media (min-width: 767px){
 
@@ -166,6 +276,13 @@ a{
     .navbar a{
         font-size: 2.5vmin;
     }
+
+    /* hamburguesas */
+
+    #hamburguesas{
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    }
     
 }
 
@@ -184,4 +301,15 @@ a{
         font-size: 3.6vmin;
     }
 
+    #hamburguesas{
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    }
+
+}
+
+@media (min-width: 1200px){
+    #hamburguesas{
+        width: 80%;
+    }
 }
